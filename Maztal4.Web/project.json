@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "Gulp.js": "1.0.2",
     "Microsoft.AspNetCore.Mvc": "1.0.0-rc2-final",
     "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0-rc2-final",
     "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-rc2-final",
@@ -8,7 +9,8 @@
     "Microsoft.Extensions.Configuration.Json": "1.0.0-rc2-final",
     "Microsoft.Extensions.Logging": "1.0.0-rc2-final",
     "Microsoft.Extensions.Logging.Console": "1.0.0-rc2-final",
-    "Microsoft.Extensions.Logging.Debug": "1.0.0-rc2-final"
+    "Microsoft.Extensions.Logging.Debug": "1.0.0-rc2-final",
+    "Npm": "3.5.2"
   },
 
   "tools": {
