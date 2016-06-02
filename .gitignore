@@ -234,4 +234,4 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
-/Maztal4.Web/wwwroot/lib/angular2
+/Maztal4.Web/wwwroot

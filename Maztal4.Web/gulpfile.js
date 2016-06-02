@@ -1,32 +1,20 @@
-﻿/*
-This file in the main entry point for defining Gulp tasks and using Gulp plugins.
+﻿/// <binding AfterBuild='default' Clean='clean' />
+/*
+This file is the main entry point for defining Gulp tasks and using Gulp plugins.
 Click here to learn more. http://go.microsoft.com/fwlink/?LinkId=518007
 */
 
 var gulp = require('gulp');
+var del = require('del');
+
+var paths = {
+    scripts: ['scripts/**/*.js', 'scripts/**/*.ts', 'scripts/**/*.map'],
+};
+
+gulp.task('clean', function () {
+    return del(['wwwroot/scripts/**/*']);
+});
 
 gulp.task('default', function () {
-    // place code for your default task here
+    gulp.src(paths.scripts).pipe(gulp.dest('wwwroot/scripts'))
 });
-
-var paths = {};
-paths.webroot = "./wwwroot/";
-paths.npmSrc = "./node_modules/";
-paths.npmLibs = paths.webroot + "lib/";
-
-gulp.task("copy-deps:angular2", function () {
-    return gulp.src(paths.npmSrc + '/angular2/bundles/**/*.js', { base: paths.npmSrc + '/angular2/bundles/' })
-         .pipe(gulp.dest(paths.npmLibs + '/angular2/'));
-});
-
-gulp.task("copy-deps:es6-shim", function () {
-    return gulp.src(paths.npmSrc + '/es6-shim/es6-sh*', { base: paths.npmSrc + '/es6-shim/' })
-         .pipe(gulp.dest(paths.npmLibs + '/es6-shim/'));
-});
-
-gulp.task("copy-deps:rxjs", function () {
-    return gulp.src(paths.npmSrc + '/rxjs/bundles/*.*', { base: paths.npmSrc + '/rxjs/bundles/' })
-         .pipe(gulp.dest(paths.npmLibs + '/rxjs/'));
-});
-
-gulp.task("copy-deps", ["copy-deps:rxjs", 'copy-deps:angular2', 'copy-deps:es6-shim']);
