@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "exports": {
+    "Maztal4.BL/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.6.1",
+      "compile": {
+        "bin/Debug/Maztal4.BL.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/Maztal4.BL.dll": {}
+      }
+    }
+  }
+}
